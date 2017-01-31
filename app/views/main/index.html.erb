@@ -1,0 +1,61 @@
+<div id="all">
+	<span>Your Gold:</span>
+	<div id="goldbox"><%= @gold %></div>
+	<div id="Places">
+		<div id="place">
+			<span class="placename">Farm</span>
+			<span class="potential">(earns 10-20 golds)</span>
+			<form action="process_money" method="post">
+				<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+				<input type="hidden" name="place" value="farm">
+				<input type="submit" value="Find Gold!"></input>
+			</form>
+		</div>
+		<div id="place">
+			<span class="placename">Cave</span>
+			<span class="potential">(earns 5-10 golds)</span>
+			<form action="process_money" method="post">
+				<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+				<input type="hidden" name="place" value="cave">
+				<input type="submit" value="Find Gold!"></input>
+			</form>
+		</div>
+		<div id="place">
+			<span class="placename">House</span>
+			<span class="potential">(earns 2-5 golds)</span>
+			<form action="process_money" method="post">
+				<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+				<input type="hidden" name="place" value="house">
+				<input type="submit" value="Find Gold!"></input>
+			</form>
+		</div>
+		<div id="place">
+			<span class="placename">Casino</span>
+			<span class="potential">(earns/takes 0-50 golds)</span>
+			<form action="process_money" method="post">
+				<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+				<input type="hidden" name="place" value="casino">
+				<input type="submit" value="Find Gold!"></input>
+			</form>
+		</div>
+	</div>
+	<span>Activities:</span>
+	<div id="activitylog">
+		<table>
+			<%  @activities.each do |activity| %>
+			<tr class="<%= activity["css"] %>">
+				<td><%= activity["desc"] %></td>
+				<td><%= activity["time"] %></td>
+			</tr>
+			<%  end %>
+		</table>
+	</div>
+	<a id="reset" href="/reset">Reset Gold</a>
+</div>
+
+
+
+
+
+
+

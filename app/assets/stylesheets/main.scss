@@ -1,0 +1,61 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+#all{
+	border: solid black 1px;
+	height: 310px;
+	width: 850px;
+	margin: 20px auto;
+	padding: 20px;
+}
+
+	#goldbox{
+		display: inline-block;
+		text-align: right;
+		font-weight: bold;
+		border: solid black 1px;
+		width: 100px;
+		padding: 2px;
+	}
+
+	#Places{
+		margin-top: 10px;
+	}
+
+		#place{
+			display: inline-block;
+			border: solid black 1px;
+			width: 200px;
+			height: 150px;
+			margin: 0 3px;
+			text-align: center;
+		}
+
+			.placename{
+				display: block;
+			}
+
+			.potential{
+				display: block;
+			}
+
+	#activitylog{
+		border: solid black 1px;
+		height: 100px;
+		overflow: scroll;
+	}
+
+		.won {
+			color: #009900
+		}
+
+		.lost {
+			color: #990000
+		}
+
+#reset {
+	position: relative;
+	top: 2px;
+}
